@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Ethan Huang</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Ethan Huang</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/misc/me_cropped.png" alt="Ethan Huang profile picture" />
+      </div>
+      <div class="section__text">
+        <h1 class="title">Ethan Huang</h1>
+        <p class="section__text__p2">2nd Year Electrical Engineering Student<br>at Carleton University</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/ETHAN_HUANG_2026.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://linkedin.com/'"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!--
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/misc/me_2_rounded.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="text-container">
+            <p>
+              Blah blah blah blah blah
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+  -->
+
+  <!-- Projects -->
+    <section id="projects">
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/RobotArm/RobotArmThumbnail.jpg"
+                alt="Arduino Robot Arm"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Robot Arm</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='./#robotarm'"
+              >
+                More Details
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/BrakeLight/BakeLightThumbnail.jpg"
+                alt="Brake Light"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Verilog Brake Light</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='./#brakelight'"
+              >
+                More Details
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/DCMotor/DCMotorThumbnail.png"
+                alt="Brushless DC Motor"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Brushless DC Motor</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='./#motor'"
+              >
+                More Details
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/AirEngine/AirEngineThumbnail.jpg"
+                alt="Air Engine"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Air Engine</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='./#airengine'"
+              >
+                More Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Robot Arm -->
+    <section id="robotarm">
+      <h1 class="project_title">Robot Arm</h1>
+      <div class="section-container">
+
+          <div class="project__pic-container">
+            <img
+              src="./assets/RobotArm/RobotArmThumbnail.jpg"
+              alt="RobotArmThumbnail"
+              class="about-pic"
+            />
+          </div>
+          <div class="about-details-container">
+            <div class="text-container">
+              <p>
+                Developed an Arduino-controlled robotic arm, prototyping and testing the circuit on a breadboard<br>
+                <br>Programmed servo motor control in C++ using the Arduino IDE to enable precise arm movement<br>
+                <br>Used a potentiometer as an analog input for real-time control of the arm's position<br>
+                <br>Designed the robot arm chassis and gears using 3D CAD software
+              </p>
+            </div>
+          </div>
+
+      </div>
+
+      <div class="section-container">
+        <div class="short-details-container">
+            <div class="text-container">
+              <p>
+                Video demonstration of Robotic Arm being controlled by potentiometers.
+              </p>
+            </div>
+        </div>
+        <video controls src="RobotArmVideo.mp4" height = "400 "width = "200"></video>
+      </div>
+      
+      <div class="section-container">
+
+          <div class="project__pic-container">
+            <img
+              src="./assets/RobotArm/RobotArmCAD.png"
+              alt="RobotArmCAD"
+              class="about-pic"
+            />
+          </div>
+          <div class="short-details-container">
+            <div class="text-container">
+              <p>
+                3D CAD Model of Robotic Arm made in Fusion 360<br>
+                <br>The RED component is a segment which houses a servo motor, and theoretically allows for infinite stages to allow for range of motion.
+              </p>
+            </div>
+          </div>
+
+      </div>
+      
+    </section>
+
+    <!-- Verilog Brake Light -->
+    <section id="brakelight">
+      <h1 class="project_title">Verilog Brake Light</h1>
+      <div class="section-container">
+
+          <div class="project__pic-container">
+            <img
+              src="./assets/BrakeLight/BakeLightThumbnail.jpg"
+              alt="RobotArmThumbnail"
+              class="about-pic"
+            />
+          </div>
+          <div class="about-details-container">
+            <div class="text-container">
+              <p>
+                Designed a digital vehicle brake and turn-signal control system using Verilog HDL, defining the system’s logic and state behavior<br>
+                <br>Implemented both combinational and sequential logic, including D flip-flops and clock division, to manage signal timing and control flow<br>
+                <br>Verified correct operation through comprehensive testbench simulations in Xilinx Vivado<br>
+                <br>Synthesized the design and deployed it onto a Nexys A7 FPGA board for hardware-level validation
+              </p>
+            </div>
+          </div>
+
+      </div>
+
+      <div class="section-container">
+        <div class="short-details-container">
+            <div class="text-container">
+              <p>
+                Video demonstration of the Brake Lights Verilog circuit after being synthesized onto the FPGA Board for visual representation.
+              </p>
+            </div>
+        </div>
+        <video controls src="BrakeLightVideo.mp4" height = "400 "width = "200"></video>
+      </div>
+      
+      <div class="section-container">
+
+          <div class="project__pic-container">
+            <img
+              src="./assets/BrakeLight/BrakeLightTimeDiagram.png"
+              alt="BrakeLightTimeDiagram"
+              class="about-pic"
+            />
+          </div>
+          <div class="short-details-container">
+            <div class="text-container">
+              <p>
+                Brake Light Module Testbench Time Diagram<br>
+                <br>Testbench module output written in Verilog to simulate the behaviours of logic circuit before synthesizing onto FPGA Board.
+              </p>
+            </div>
+          </div>
+
+      </div>
+      
+    </section>
+
+    <!-- DC Motor -->
+    <section id="motor">
+      <h1 class="project_title">Brushless DC Motor</h1>
+      <div class="section-container">
+
+          <div class="project__pic-container">
+            <img
+              src="./assets/DCMotor/DCMotorThumbnail.png"
+              alt="DCMotorThumbnail"
+              class="about-pic"
+            />
+          </div>
+          <div class="about-details-container">
+            <div class="text-container">
+              <p>
+                Designed and built a custom brushless DC motor, integrating mechanical and electrical components into a functional system<br>
+                <br>Modeled the motor housing and structural components in Fusion 360 and fabricated them using a Bambu Lab P1 3D printer<br>
+                <br>Integrated permanent magnets, a LiPo battery, ESC, and servo tester to drive and control the motor<br>
+                <br>Soldered and assembled all electrical connections, applying electromagnetic and DC motor theory to achieve reliable operation
+              </p>
+            </div>
+          </div>
+
+      </div>
+
+      <div class="section-container">
+        <div class="short-details-container">
+            <div class="text-container">
+              <p>
+                Video demonstration of DC Motor spinning, controlled by servo tester.
+              </p>
+            </div>
+        </div>
+        <video controls src="DCMotorVideo.mp4" height = "400 "width = "200"></video>
+      </div>
+      
+      <div class="section-container">
+
+          <div class="project__pic-container">
+            <img
+              src="./assets/DCMotor/DCMotorInside.png"
+              alt="InsideMotor"
+              class="about-pic"
+            />
+          </div>
+          <div class="short-details-container">
+            <div class="text-container">
+              <p>
+                DC Motor Assembly presenting the motor's stator(on the left) and the rotor(on the right).<br>
+                <br>The stator is made from 3 seperate copper wires which are winded around the red, yellow, and green components respectively.
+              </p>
+            </div>
+          </div>
+
+      </div>
+      
+    </section>
+
+    <!-- Air Engine -->
+    <section id="airengine">
+      <h1 class="project_title">Air Engine</h1>
+      <div class="section-container">
+
+          <div class="project__pic-container">
+            <img
+              src="./assets/AirEngine/AirEngineThumbnail.jpg"
+              alt="AirEngineThumbnail"
+              class="about-pic"
+            />
+          </div>
+          <div class="about-details-container">
+            <div class="text-container">
+              <p>
+                Designed and built a compressed air engine from scratch, demonstrating the mechanical operation of pistons and engine systems<br>
+                <br>Modeled all engine components in Fusion 360 and fabricated them using a Bambu Lab P1 3D printer<br>
+                <br>Applied 3D printing dimension and tolerance constraints to ensure proper fit, motion, and air sealing between components<br>
+                <br>Assembled and tested the engine using a compressed air supply, safely operating an air compressor to validate functionality
+              </p>
+            </div>
+          </div>
+
+      </div>
+
+      <div class="section-container">
+        <div class="short-details-container">
+            <div class="text-container">
+              <p>
+                Video demonstration of the Compressed Air Engine rotor spinning.<br>
+                <br>!!! AUDIO WARNING !!!<br>
+                <br>Nuts and Bolts attached to rotor are to provide extra mass for increased momentum.
+              </p>
+            </div>
+        </div>
+        <video controls src="Air Engine Video.mp4" height = "200 "width = "300"></video>
+      </div>
+      
+      <div class="section-container">
+
+          <div class="project__pic-container">
+            <img
+              src="./assets/AirEngine/AirEngineCAD.png"
+              alt="AirEngineCAD"
+              class="about-pic"
+            />
+          </div>
+          <div class="short-details-container">
+            <div class="text-container">
+              <p>
+                3D CAD Model of Air Engine made in Fusion 360<br>
+                <br>The RED component represents a ball bearing, and the YELLOW component represents a bolt used as an axle. The rest of the components were 3D printed.
+              </p>
+            </div>
+          </div>
+
+      </div>
+      
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:ethan.huang299@gmail.com">ethan.huang299@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/ethan-a-huang">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>Copyright &#169; 2026 Ethan Huang. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
